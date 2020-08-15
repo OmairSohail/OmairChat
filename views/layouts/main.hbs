@@ -5,8 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Omair Chat</title>
     <link rel="stylesheet" href="/css/tailwind.css">
+    <link rel="stylesheet" href="/css/main.css">
 </head>
 <body>
-    <h2>Main Layout</h2>
+    {{> _header}}
+    <div class="container">
+       {{{body}}}
+    </div> 
+    <script src="https://kit.fontawesome.com/52c84d4ffe.js" crossorigin="anonymous"></script>
 </body>
 </html>

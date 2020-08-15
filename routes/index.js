@@ -5,6 +5,12 @@ const router = express.Router();
 // @route  /
 
 router.get("/", (req, res) => {
+  res.render("index", {
+    layout: "main",
+  });
+});
+
+router.get("/login", (req, res) => {
   res.render("Login", {
     layout: "login",
   });
