@@ -2,6 +2,20 @@ const express = require("express");
 const router = express.Router();
 const passport = require("passport");
 
+// @desc   Local Auth Login Page
+// @route  /auth/login
+
+router.get("/login", (req, res) => {
+  res.render("Login");
+});
+
+// @desc   Local Auth Signup Page
+// @route  /auth/signup
+
+router.get("/signup", (req, res) => {
+  res.render("Signup");
+});
+
 // @desc   Google Auth
 // @route  /auth/google
 
@@ -35,5 +49,13 @@ router.get(
     res.redirect("/");
   }
 );
+
+// @desc   Logging out
+// @route  /auth/logout
+
+router.get("/logout", (req, res) => {
+  req.logOut();
+  res.redirect("/");
+});
 
 module.exports = router;

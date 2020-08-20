@@ -59,6 +59,8 @@ app.set("view engine", ".hbs");
 app.use("/", require("./routes/index"));
 // -- Auth Routes
 app.use("/auth", require("./routes/auth"));
+// -- Error Routes
+app.use("/error", require("./routes/errors"));
 
 // Logger
 if (process.env.NODE_ENV === "development") {
